@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loja de Acessórios Automotivos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo h1 {
+            font-size: 24px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        /* Estilo da seção de produtos */
+        .produtos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .produto {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin-bottom: 20px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+        }
+
+        .produto h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .produto p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .produto span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .produto button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .produto button:hover {
+            background-color: #555;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social {
+            margin-top: 10px;
+        }
+
+        footer .social a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        footer .social a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>AutoCarShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Meu Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="produtos">
+        <h2>Produtos em Destaque</h2>
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Produto 1">
+            <h3>Tapete Personalizado</h3>
+            <p>Tapete exclusivo para o seu carro. Proteja seu veículo com estilo.</p>
+            <span>R$ 199,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Produto 2">
+            <h3>Capa de Proteção</h3>
+            <p>Capa de proteção de pintura de alta qualidade, disponível em diversos tamanhos.</p>
+            <span>R$ 149,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Produto 3">
+            <h3>Kit de Ferramentas</h3>
+            <p>Kit completo de ferramentas para pequenos reparos no seu carro.</p>
+            <span>R$ 299,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Produto 3">
+            <h3>Farois de Led</h3>
+            <p>Par farois de led de 30.000 lumens ideal para dirigibilidade noturna.</p>
+            <span>R$ 499,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Capa de Banco">
+            <h3>Capa de Banco</h3>
+            <p>Capa de banco impermeável e resistente, mantendo o interior do seu carro sempre limpo.</p>
+            <span>R$ 129,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Camiseta Automotiva">
+            <h3>Camiseta Automotiva</h3>
+            <p>Camiseta estilosa para os apaixonados por carros, com estampas exclusivas.</p>
+            <span>R$ 89,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Luva de Direção">
+            <h3>Luva de Direção</h3>
+            <p>Luva de direção ergonômica para maior conforto e firmeza ao dirigir.</p>
+            <span>R$ 79,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Protetor de Volante">
+            <h3>Protetor de Volante</h3>
+            <p>Protetor de volante para evitar desgaste e garantir um toque macio ao dirigir.</p>
+            <span>R$ 49,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Suporte para Celular">
+            <h3>Suporte para Celular</h3>
+            <p>Suporte para celular ajustável para fixar no painel do seu carro e garantir praticidade.</p>
+            <span>R$ 59,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Kit Higiene Automotiva">
+            <h3>Kit Higiene Automotiva</h3>
+            <p>Kit completo para cuidar da limpeza do seu carro, com produtos especiais para cada necessidade.</p>
+            <span>R$ 149,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Teto Solar Articulado">
+            <h3>Teto Solar Articulado</h3>
+            <p>Teto solar articulado para dar mais elegância e frescor ao interior do seu carro.</p>
+            <span>R$ 899,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Almofada de Pescoço">
+            <h3>Almofada de Pescoço</h3>
+            <p>Almofada de pescoço ergonômica para maior conforto em viagens longas.</p>
+            <span>R$ 39,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Protetor de Farol">
+            <h3>Protetor de Farol</h3>
+            <p>Protetores para faróis do seu carro, protegendo contra impactos e sujeiras.</p>
+            <span>R$ 69,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/250x150" alt="Organizador de Banco">
+            <h3>Organizador de Banco</h3>
+            <p>Organize todos os seus itens no banco traseiro de forma prática e eficiente.</p>
+            <span>R$ 49,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 AutoCarShop | Todos os direitos reservados</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+
+</html>

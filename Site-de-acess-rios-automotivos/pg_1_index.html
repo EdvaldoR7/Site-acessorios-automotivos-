@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCarShop - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Definindo fontes e cores gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container principal */
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(78, 9, 9, 0.1);
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Estilos para o formulário */
+        .form-container h2 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #363636;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para mensagens de erro ou validação */
+        input:invalid {
+            border-color: red;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tela de boas-vindas -->
+        <header>
+            <h1>Bem-vindo a AutoCarShop!</h1>
+            <p>Cadastre-se para aproveitar as melhores ofertas com desconto e acessórios automotivos.</p>
+        </header>
+
+        <!-- Formulário de Cadastro -->
+        <section class="form-container">
+            <h2>Cadastre-se</h2>
+            <form action="pg_2_index.html" method="get">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+                <label for="confirmar-senha">Confirmar Senha</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha"
+                    required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
