@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loja de Acessórios Automotivos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #ff6347;
+            /* Tom de vermelho vibrante */
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo h1 {
+            font-size: 42px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 17px;
+        }
+
+        header nav ul li a:hover {
+            color: #21477a;
+        }
+
+        /* Estilo da seção de produtos */
+        .produtos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px;
+            background-color: #8b8b8b;
+        }
+
+        /* Estilo do título de produtos em destaque */
+        .produtos h2 {
+            color: white;
+            /* Cor branca para o título */
+            text-align: center;
+            /* Centraliza o título */
+            width: 100%;
+            /* Garante que ocupe toda a largura */
+            margin-bottom: 40px;
+            /* Espaço entre o título e os produtos */
+            font-size: 28px;
+            /* Tamanho maior para o título */
+        }
+
+        .produto {
+            background-color: #21477a;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            width: 250px;
+            margin-bottom: 20px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .produto:hover {
+            background-color: #1767a8;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            /* Espaço entre a imagem e o título */
+        }
+
+        .produto h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        .produto p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .produto span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .produto button {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .produto button:hover {
+            background-color: #d73737;
+            transform: scale(1.05);
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social {
+            margin-top: 10px;
+        }
+
+        footer .social a {
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        footer .social a:hover {
+            color: #4279c0;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>AutoCarShop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Meu Carrinho</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="produtos">
+        <h2>Produtos em Destaque</h2>
+        <!-- Produtos -->
+        <div class="produto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_903403-MLB72382356601_102023-O.webp" alt="Produto 3">
+            <h3>Farois de Led</h3>
+            <p>Par farois de led de 30.000 lumens ideal para dirigibilidade noturna.</p>
+            <span>R$ 499,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://images.tcdn.com.br/img/img_prod/712603/capa_para_cobrir_carro_premium_couro_ecologico_m_3887_2_ded75326019eeccc962cd3936f20d963.jpg"
+                alt="Produto 2">
+            <h3>Capa de Proteção</h3>
+            <p>Capa de proteção de pintura de alta qualidade, disponível em diversos tamanhos.</p>
+            <span>R$ 149,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://images-americanas.b2w.io/produtos/39966490/imagens/dvd-player-pioneer-avh-x5880tv-2-din-tv-digital-bluetooth-usb-mixtrax/39966493_1_large.jpg"
+                alt="Produto 2">
+            <h3>Dvd Player Pioneer </h3>
+            <p>Dvd Player Pioneer Avh-X5880Tv 2-Din TV Digital/Bluetooth/USB/Mixtrax </p>
+            <span>R$ 1.499,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://images.tcdn.com.br/img/img_prod/1109830/v_light_pro_vitrificador_de_farol_50ml_vonixx_429_1_6c5b0ddb142550beb10faea9b5fd0934.jpg"
+                alt="Vitrificador de Farol">
+            <h3>Vitrificador de Farol</h3>
+            <p>Vitrificador para faróis, protegendo contra sujeiras e encardidos.</p>
+            <span>R$ 249,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://m.media-amazon.com/images/I/71Hjy6CZBVL._AC_UF1000,1000_QL80_.jpg" alt="Produto 1">
+            <h3>Tapete Personalizado</h3>
+            <p>Tapete exclusivo para o seu carro. Proteja seu veículo com estilo.</p>
+            <span>R$ 199,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://m.media-amazon.com/images/I/51TIZQm4YjL._AC_UF1000,1000_QL80_.jpg" alt="Capa de Banco">
+            <h3>Capa de Banco</h3>
+            <p>Capa de banco impermeável e resistente, mantendo o interior do seu carro sempre limpo.</p>
+            <span>R$ 129,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://www.pitonipneus.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/n/pneu-215-45-r17-comforser-cf700-pitoni-pneus.jpg"
+                alt="kit 4 Pneus">
+            <h3>kit 4 Pneus Aro 17 Comforser 215/45R17</h3>
+            <p>Pneu aro 17, com 5 anos de garantia e certificação inmetro, desenho UHP</p>
+            <span>R$ 2.399,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://images.tcdn.com.br/img/img_prod/636334/kit_4_rodas_m16_15x6_modelo_onix_4x100_et_40_bd_23187_1_92c23820791bac6b4a758d4d69e468d9.jpg"
+                alt="kit 4 roda">
+            <h3>Kit 4 Rodas M16 15X6 Modelo Onix 4X100</h3>
+            <p>Luva de direção ergonômica para maior conforto e firmeza ao dirigir.</p>
+            <span>R$ 2.999,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://m.media-amazon.com/images/I/81gN1uPiQ1L._AC_UF1000,1000_QL80_.jpg"
+                alt="Protetor de Volante">
+            <h3>Protetor de Volante</h3>
+            <p>Protetor de volante para evitar desgaste e garantir um toque macio ao dirigir.</p>
+            <span>R$ 99,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://paraisodoseletronicos.com.br/wp-content/uploads/2023/02/suporte-celular-carro-veicular-universal.png"
+                alt="Suporte para Celular">
+            <h3>Suporte para Celular</h3>
+            <p>Suporte para celular ajustável para fixar no painel do seu carro e garantir praticidade.</p>
+            <span>R$ 59,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://83047.cdn.simplo7.net/static/83047/sku/todos-dos-produtos-kit-limpeza-automotiva-vonixx-com-9-produtos-completo-hobby-1665755593358.jpg"
+                alt="Kit Limpeza Automotiva">
+            <h3>Kit Limpeza Automotiva</h3>
+            <p>Kit completo para cuidar da limpeza do seu carro, com produtos especiais para cada necessidade.</p>
+            <span>R$ 209,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://acdn.mitiendanube.com/stores/002/428/786/products/camiseta_veneto_fundo_branco1-6bf1c83dfff92ca00916848506634745-640-0.jpg"
+                alt="Camiseta Automotiva">
+            <h3>Camiseta Automotiva</h3>
+            <p>Camiseta estilosa para os apaixonados por carros, com estampas exclusivas.</p>
+            <span>R$ 89,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL3VV5zagLN_DeChZ66qo2E-OMAGRKHg3R_g&s"
+                alt="Subwoofer ">
+            <h3>Subwoofer 12 Polegadas Bravox </h3>
+            <p>Subwoofer 12 Polegadas Bravox 500w Rms UXP-12 Diamond 2+2 Ohms 4+4 Ohms Bobina Dupla.</p>
+            <span>R$ 599,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://a-static.mlcdn.com.br/1500x1500/parafusos-antifurto-rodas-carros-12x15mm-chevrolet-volkswagen-renault-motorcare-au725/ajpacessorios/au725/b37cd8daa2a87ad9005daaf1a0808f01.jpeg"
+                alt="Produto 3">
+            <h3>Parafusos Antifurto</h3>
+            <p>Kit Parafusos Antifurto Rodas Carros 12x1,5mm Chevrolet Volkswagen Renault.</p>
+            <span>R$ 149,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRDLDS3HWDotsl5EYughrqrPv-m021dSKjqg&s"
+                alt="Ponteira Dupla">
+            <h3>Ponteira Dupla</h3>
+            <p>Luzian P015 Ponteira Dupla Em Inox Burned Tip 3 Polegadas</p>
+            <span>R$ 300,00</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_779676-MLB77734153083_072024-O.webp" alt="Produto 3">
+            <h3>Kit de Ferramentas</h3>
+            <p>Kit completo de ferramentas para pequenos reparos no seu carro.</p>
+            <span>R$ 999,99</span>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <!-- Mais produtos... -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AutoCarShop | Todos os direitos reservados</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

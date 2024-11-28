@@ -4,270 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loja de Acessórios Automotivos</title>
+    <title>AutoCarShop - Login</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Resetando margens e padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Definindo fontes e cores gerais */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #8b8b8b;
             color: #333;
-        }
-
-        /* Estilo do cabeçalho */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            /* Remover margem da página */
         }
 
-        header .logo h1 {
-            font-size: 24px;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 16px;
-        }
-
-        /* Estilo da seção de produtos */
-        .produtos {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .produto {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            margin-bottom: 20px;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .produto img {
+        /* Faixa vermelha no topo com título */
+        .logo {
             width: 100%;
-            height: auto;
+            background-color: #ff6347;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            margin-top: 0;
+            /* Remover qualquer margem superior */
+            position: absolute;
+            /* Fixa a faixa no topo */
+            top: 0;
         }
 
-        .produto h3 {
+        .logo h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .logo p {
             font-size: 18px;
-            margin: 10px 0;
         }
 
-        .produto p {
-            font-size: 14px;
-            color: #777;
-        }
-
-        .produto span {
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 10px;
-            display: block;
-        }
-
-        .produto button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px;
+        /* Container principal do formulário */
+        .container {
+            background-color: #21477a;
             width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(78, 9, 9, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 120px;
+            /* Dá um espaçamento para o conteúdo não ficar em cima da faixa */
         }
 
-        .produto button:hover {
-            background-color: #555;
-        }
-
-        /* Estilo do rodapé */
-        footer {
-            background-color: #333;
-            color: #fff;
+        /* Estilos para o formulário */
+        .form-container h2 {
             text-align: center;
-            padding: 20px;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
 
-        footer .social {
-            margin-top: 10px;
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
 
-        footer .social a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 10px;
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
             font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
         }
 
-        footer .social a:hover {
-            text-decoration: underline;
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #ffffff;
+            outline: none;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a82913;
+        }
+
+        /* Estilos para mensagens de erro ou validação */
+        input:invalid {
+            border-color: rgb(255, 255, 255);
+        }
+
+        input:valid {
+            border-color: green;
         }
     </style>
 </head>
 
 <body>
+    <!-- Faixa vermelha com título -->
+    <div class="logo">
+        <h1>Seja bem-vindo à AutoCarShop!</h1>
+        <p>Faça login para acessar suas ofertas.</p>
+    </div>
 
-    <header>
-        <div class="logo">
-            <h1>AutoCarShop</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Promoções</a></li>
-                <li><a href="#">Meu Carrinho</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Container com o formulário de login -->
+    <div class="container">
+        <section class="form-container">
+            <h2>Faça seu Login</h2>
+            <form action="pg_3_index.html" method="get">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
 
-    <section class="produtos">
-        <h2>Produtos em Destaque</h2>
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Produto 1">
-            <h3>Tapete Personalizado</h3>
-            <p>Tapete exclusivo para o seu carro. Proteja seu veículo com estilo.</p>
-            <span>R$ 199,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Produto 2">
-            <h3>Capa de Proteção</h3>
-            <p>Capa de proteção de pintura de alta qualidade, disponível em diversos tamanhos.</p>
-            <span>R$ 149,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Produto 3">
-            <h3>Kit de Ferramentas</h3>
-            <p>Kit completo de ferramentas para pequenos reparos no seu carro.</p>
-            <span>R$ 299,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Produto 3">
-            <h3>Farois de Led</h3>
-            <p>Par farois de led de 30.000 lumens ideal para dirigibilidade noturna.</p>
-            <span>R$ 499,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Capa de Banco">
-            <h3>Capa de Banco</h3>
-            <p>Capa de banco impermeável e resistente, mantendo o interior do seu carro sempre limpo.</p>
-            <span>R$ 129,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Camiseta Automotiva">
-            <h3>Camiseta Automotiva</h3>
-            <p>Camiseta estilosa para os apaixonados por carros, com estampas exclusivas.</p>
-            <span>R$ 89,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Luva de Direção">
-            <h3>Luva de Direção</h3>
-            <p>Luva de direção ergonômica para maior conforto e firmeza ao dirigir.</p>
-            <span>R$ 79,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Protetor de Volante">
-            <h3>Protetor de Volante</h3>
-            <p>Protetor de volante para evitar desgaste e garantir um toque macio ao dirigir.</p>
-            <span>R$ 49,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Suporte para Celular">
-            <h3>Suporte para Celular</h3>
-            <p>Suporte para celular ajustável para fixar no painel do seu carro e garantir praticidade.</p>
-            <span>R$ 59,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Kit Higiene Automotiva">
-            <h3>Kit Higiene Automotiva</h3>
-            <p>Kit completo para cuidar da limpeza do seu carro, com produtos especiais para cada necessidade.</p>
-            <span>R$ 149,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Teto Solar Articulado">
-            <h3>Teto Solar Articulado</h3>
-            <p>Teto solar articulado para dar mais elegância e frescor ao interior do seu carro.</p>
-            <span>R$ 899,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Almofada de Pescoço">
-            <h3>Almofada de Pescoço</h3>
-            <p>Almofada de pescoço ergonômica para maior conforto em viagens longas.</p>
-            <span>R$ 39,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Protetor de Farol">
-            <h3>Protetor de Farol</h3>
-            <p>Protetores para faróis do seu carro, protegendo contra impactos e sujeiras.</p>
-            <span>R$ 69,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-        <div class="produto">
-            <img src="https://via.placeholder.com/250x150" alt="Organizador de Banco">
-            <h3>Organizador de Banco</h3>
-            <p>Organize todos os seus itens no banco traseiro de forma prática e eficiente.</p>
-            <span>R$ 49,99</span>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-
-
-    </section>
-
-
-    <footer>
-        <p>&copy; 2024 AutoCarShop | Todos os direitos reservados</p>
-        <div class="social">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </div>
-    </footer>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </div>
 </body>
 
 </html>
